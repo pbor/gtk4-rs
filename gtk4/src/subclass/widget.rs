@@ -895,6 +895,27 @@ pub unsafe trait WidgetClassSubclassExt: ClassStruct {
         }
     }
 
+    fn install_property_action(&mut self, action_name: &str, property_name: &str) {
+        unsafe {
+            let widget_class = self as *mut _ as *mut ffi::GtkWidgetClass;
+            ffi::gtk_widget_class_install_property_action(
+                widget_class,
+                action_name.to_glib_none().0,
+                property_name.to_glib_none().0,
+            );
+        }
+    }
+
+    fn set_activate_signal_from_name(&mut self, signal_name: &str) {
+        unsafe {
+            let widget_class = self as *mut _ as *mut ffi::GtkWidgetClass;
+            ffi::gtk_widget_class_set_activate_signal_from_name(
+                widget_class,
+                signal_name.to_glib_none().0,
+            );
+        }
+    }
+
     fn set_layout_manager_type<T: IsA<LayoutManager>>(&mut self) {
         unsafe {
             let widget_class = self as *mut _ as *mut ffi::GtkWidgetClass;
