@@ -52,6 +52,7 @@ mod rectangle;
 mod rgba;
 mod surface;
 mod time_coord;
+mod toplevel_size;
 
 pub use self::auto::functions::*;
 pub use auto::*;
@@ -65,3 +66,4 @@ pub use rectangle::Rectangle;
 pub use rgba::{RgbaParseError, RGBA};
 pub use surface::SurfaceExtManual;
 pub use time_coord::TimeCoord;
+pub use toplevel_size::ToplevelSize;

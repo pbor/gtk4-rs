@@ -71,6 +71,10 @@ generate = [
     "Gdk.VulkanError",
 ]
 
+ignore = [
+    "Gdk.DrawingContext", # not useful
+]
+
 manual = [
     "cairo.Content",
     "cairo.Context",
@@ -80,6 +84,7 @@ manual = [
     "Gdk.Rectangle",
     "Gdk.RGBA",
     "Gdk.TimeCoord",
+    "Gdk.ToplevelSize",
     "GdkPixbuf.Pixbuf",
     "Gio.AppLaunchContext",
     "Gio.Cancellable",
