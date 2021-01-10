@@ -184,8 +184,10 @@ generate = [
     "Gtk.WrapMode",
 ]
 
-# TODO
+
 ignore = [
+    "Gtk.CellAreaClass",
+    "Gtk.WidgetClass",
 ]
 
 manual = [
@@ -265,6 +267,7 @@ manual = [
     "Graphene.Vec4",
     "Gsk.BlendMode",
     "Gsk.ColorStop",
+    "Gsk.GLShader",
     "Gsk.Renderer",
     "Gsk.RenderNode",
     "Gsk.RoundedRect",
@@ -2399,11 +2402,11 @@ status = "generate"
 manual_traits = ["WidgetExtManual"]
     [[object.function]]
     name = "add_tick_callback"
-    ignore = true
+    manual = true
     doc_trait_name = "WidgetExtManual"
     [[object.function]]
     name = "remove_tick_callback"
-    ignore = true
+    manual = true
     doc_trait_name = "WidgetExtManual"
     # remove after https://gitlab.gnome.org/GNOME/gtk/-/merge_requests/2887
     [[object.function]]
